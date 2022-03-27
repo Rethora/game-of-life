@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+:root {
+  --primary: #0b1d4d;
+  --text: #f4af1b;
+  --accent: #a0a0a0;
+  --secondary: #f2bc94;
+}
+
+* {
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--primary);
+}
+
+.App {
+  text-align: center;
+  padding: 20px 0 50px;
+}
+
+.label {
+  margin-top: 10px;
+}
+
+.board {
+  border-top: 1px solid var(--accent);
+  border-left: 1px solid var(--accent);
+  text-align: center;
+  max-width: 1920px;
+  width: 96vw;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  border-right: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  width: 1vw;
+  height: 1vw;
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.cell:hover {
+  cursor: pointer;
+  background-color: var(--secondary);
+  opacity: 1;
+}
+
+.active {
+  background-color: var(--secondary);
+  opacity: .7;
+}
+
+.generation {
+  margin-bottom: 10px;
+}
+
+.my-button {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  width: 15vw;
+  padding: 5px;
+  margin: 5px;
+}
+
+button {
+  background-color: var(--secondary);
+  color: white;
+  opacity: .7;
+  border-radius: 8px;
+}
+
+.my-button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.slider-container {
+  display: flex;
+  margin: 0 42.5vw;
+}
+
+.slider {
+  border-radius: 8px;
+  -webkit-appearance: none;
+  width: 15vw;
+  height: 25px;
+  background: var(--secondary);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  border-radius: 8px;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: var(--accent);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: var(--my-green);
+  cursor: pointer;
+}
+
+#patterns {
+  border-radius: 8px;
+  height: 25px;
+  width: 15vw;
+  text-align: center;
+  opacity: .7;
+  background: var(--secondary);
+  color: white;
+}
+
+#patterns:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+option {
+  opacity: .7;
+  background: var(--secondary);
+  color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+  #patterns, .my-button, .slider {
+    width: 25vw;
+  }
+
+  .slider-container {
+    margin: 0 37.5vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  *, select, option {
+    font-size: x-small;
+  }
+
+  .my-button {
+    font-size: 8px;
+  }
+
+  #patterns, .my-button, .slider {
+    width: 35vw;
+  }
+
+  .slider-container {
+    margin: 0 32.5vw;
+  }
+}
